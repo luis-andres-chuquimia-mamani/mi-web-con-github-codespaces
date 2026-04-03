@@ -10,6 +10,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RequestMapping("/endpoind")
 public class HolaMundo {
     
+    
+    @GetMapping("/")
+    public String inicio(){
+        return "Este es el inicio del end poind";
+    }
+
     @GetMapping("/saludo")
     public String saludo() {
         return "Hola Mundo :D";
