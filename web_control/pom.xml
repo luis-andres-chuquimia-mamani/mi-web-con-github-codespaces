@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.luis_andres.spring</groupId>
 	<artifactId>web_control</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>web_control</name>
 	<description/>
 	<url/>
