@@ -19,7 +19,7 @@ public class HolaMundo {
 
     @GetMapping("/libro")
     public ObjetoLibro inicio(){
-        return servicio.encontrarLibro(0);
+        return servicio.encontrarLibro(1);
     }
 
     @GetMapping("/saludo")
