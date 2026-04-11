@@ -3,17 +3,23 @@ package com.luis_andres.spring.web_control.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
+import com.luis_andres.spring.web_control.model.ObjetoLibro;
+import com.luis_andres.spring.web_control.service.serviceHolaMundo;
 
+import lombok.RequiredArgsConstructor;
 
 
 @RestController
 @RequestMapping("/endpoind")
+@RequiredArgsConstructor
 public class HolaMundo {
     
-    
-    @GetMapping("/")
-    public String inicio(){
-        return "Este es el inicio del end poind";
+    private final serviceHolaMundo servicio;
+
+
+    @GetMapping("/libro")
+    public ObjetoLibro inicio(){
+        return servicio.encontrarLibro(0);
     }
 
     @GetMapping("/saludo")
