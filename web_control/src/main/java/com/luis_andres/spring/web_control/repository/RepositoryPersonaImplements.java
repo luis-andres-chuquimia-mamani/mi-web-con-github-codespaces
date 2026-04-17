@@ -10,11 +10,14 @@ import com.luis_andres.spring.web_control.model.Persona;
 @Repository
 public class RepositoryPersonaImplements implements RepositoryPersona{
 
+    /*
     private List<Persona> ListaBDD = new ArrayList<>(List.of(
         new Persona (1,"Luis","LA PAZ"),
         new Persona (2,"Andres","SANTA CRUZ"),
         new Persona (3,"Victor","BENI")
     ));
+    */
+    private List<Persona> ListaBDD = new ArrayList<>();
 
     @Override
     public List<Persona> listarPersonas() {
