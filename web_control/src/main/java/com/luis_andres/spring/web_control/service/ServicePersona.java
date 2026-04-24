@@ -8,7 +8,8 @@ public interface ServicePersona {
 
     List<Persona> listarPersonas();
     Persona encontrarPorId(int id);
-    void reguistrarPersona(Persona p);
+    Persona reguistrarPersona(Persona p);
+    Persona actualizarPersonaServicio(int id, Persona p);
     void eliminarPersona(int id);
     
 }

@@ -8,7 +8,8 @@ public interface RepositoryPersona {
 
     List<Persona> listarPersonas();
     Persona encontrarPorId(int id);
-    void reguistrarPersona(Persona p);
+    Persona reguistrarPersona(Persona p);
+    Persona actualizarPersonaRepositorio(int id, Persona p);
     void eliminarPersona(int id);
     
 }

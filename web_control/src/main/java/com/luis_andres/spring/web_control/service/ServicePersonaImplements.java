@@ -26,8 +26,13 @@ public class ServicePersonaImplements implements ServicePersona{
     }
 
     @Override
-    public void reguistrarPersona(Persona p) {
-        repo.reguistrarPersona(p);
+    public Persona reguistrarPersona(Persona p) {
+        return repo.reguistrarPersona(p);
+    }
+
+    @Override
+    public Persona actualizarPersonaServicio(int id, Persona p){
+        return repo.actualizarPersonaRepositorio(id,p);
     }
 
     @Override

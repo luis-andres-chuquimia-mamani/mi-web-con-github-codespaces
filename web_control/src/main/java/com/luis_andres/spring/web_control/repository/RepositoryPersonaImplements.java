@@ -11,7 +11,13 @@ import com.luis_andres.spring.web_control.model.Persona;
 public class RepositoryPersonaImplements implements RepositoryPersona{
 
 
-    private List<Persona> ListaBDD = new ArrayList<>();
+    private List<Persona> ListaBDD = new ArrayList<>(
+        List.of(
+            new Persona(89,"Joselu","Santa Cruz"),
+            new Persona(707,"CR7","Portugal"),
+            new Persona(203,"Messi","Rosario")
+        )
+    );
 
     @Override
     public List<Persona> listarPersonas() {
@@ -29,9 +35,23 @@ public class RepositoryPersonaImplements implements RepositoryPersona{
     }
 
     @Override
-    public void reguistrarPersona(Persona p) {
+    public Persona reguistrarPersona(Persona p) {
         System.out.println("Metodo -> reguistrarPersona");
         this.ListaBDD.add(p);
+        return p;
+    }
+
+    @Override
+    public Persona actualizarPersonaRepositorio(int id, Persona p) {
+        System.out.println("Metodo -> actualizarPersonaRepositorio");
+        Persona personaCambio = new Persona();
+        for (Persona persona : ListaBDD) {
+            if(persona.getId() == id){
+                persona = p;
+                personaCambio = persona;
+            }
+        }
+        return personaCambio;
     }
 
     @Override
@@ -41,5 +61,7 @@ public class RepositoryPersonaImplements implements RepositoryPersona{
             .filter(p -> p.getId() != id)
             .toList();
     }
+
+
     
 }
