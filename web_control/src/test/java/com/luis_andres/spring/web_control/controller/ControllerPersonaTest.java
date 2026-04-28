@@ -18,9 +18,11 @@ public class ControllerPersonaTest {
     @MockitoBean
     private ServicePersona servicio;
 
+    private Persona persona1;
+
     @BeforeEach
     void setUp(){
-        Persona persona1 = Persona.builder()
+        persona1 = Persona.builder()
             .id(1)
             .nombre("Andres")
             .ciudad("Beni")
@@ -32,6 +34,17 @@ public class ControllerPersonaTest {
             .ciudad("Beni")
             .build();
     }
+
+    public void reguistrarPersonaTest(){
+        Persona persona = Persona.builder()
+        .id(9090)
+        .nombre("nil ")
+        .ciudad("Beni")
+        .build();
+
+
+    }
+
 
     
 
