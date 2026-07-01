@@ -9,6 +9,7 @@ import com.luis_andres.spring.web_control.service.serviceHolaMundo;
 import lombok.RequiredArgsConstructor;
 
 
+
 @RestController
 @RequestMapping("/endpoind")
 @RequiredArgsConstructor
@@ -26,6 +27,8 @@ public class HolaMundo {
     public String saludo() {
         return "Hola Mundo :D";
     }
+    
+    
     
 
     

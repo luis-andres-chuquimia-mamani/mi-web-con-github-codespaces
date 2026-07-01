@@ -10,6 +10,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,15 +26,13 @@ public class UserInfo {
     private Long idUser;
 
     @Column(name = "user_name", nullable = true, length = 50)
-    private String userName;
+    private String username;
     
     @Column(name = "password", nullable = true, length = 70)
     private String password;
 
-    @Column(name = "role", nullable = true, length = 10)
-    private String role;
+    @Column(name = "roles", nullable = true, length = 10)
+    private String roles;
 
     
-
-
 }
